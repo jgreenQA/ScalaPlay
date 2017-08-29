@@ -7,3 +7,9 @@ GET     /                           controllers.Application.index
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+# Task 1
+GET     /google                     controllers.Default.redirect(to = "http://www.google.com")
+
+# Task 2
+GET     /values                     controllers.Application.values(val1: Option[String], val2: Option[Int])
