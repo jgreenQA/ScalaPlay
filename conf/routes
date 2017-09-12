@@ -7,3 +7,25 @@ GET     /                           controllers.Application.index
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+# Task 1
+GET     /google                     controllers.Default.redirect(to = "http://www.google.com")
+
+# Task 2
+GET     /values                     controllers.Application.values(value: Option[Int] = Some(0))
+
+# Task 3
+GET     /reversevalues              controllers.Application.reverse
+
+# Task 5
+GET     /sameroute                  controllers.Application.values(value: Option[Int] = Some(1))
+GET     /sameroute                  controllers.Application.values(value: Option[Int] = Some(2))
+
+# Task 6
+GET     /notfound                   controllers.Default.notFound
+GET     /error                      controllers.Default.error
+GET     /todo                       controllers.Default.todo
+
+# Task 7
+GET     /removedata                 controllers.Application.removeData
+GET     /renamecookie               controllers.Application.renameCookie
